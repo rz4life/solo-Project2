@@ -9,10 +9,10 @@ A web page that helps you decide where you should travel to next based on pictur
 ### Wireframes 
 
 
-![page 1](images/page 1.png)
+![page 1](images/page_1.png)
 ![page 2](images/Page_2.png)
 ![page 3](images/Page_3.png)
-![page 4](images/page 4.png)
+![page 4](images/page_4.png)
 
 
 ### User stories 
