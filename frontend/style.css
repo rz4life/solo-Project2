@@ -1,0 +1,22 @@
+.hidden {
+    display: none;
+}
+body{
+    display: flex;
+    flex-direction: column; 
+     justify-content: center;
+    align-items: center; 
+   
+}
+
+
+.nav-link {
+    display: flex;
+    flex-direction: row;
+    text-decoration: underline;
+    margin: 0.5em;
+}
+.nav-link:hover {
+    cursor: pointer;
+  }
+

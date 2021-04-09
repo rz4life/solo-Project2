@@ -17,8 +17,8 @@ A web page that helps you decide where you should travel to next based on pictur
 
 ### User stories 
 
-* when you open the page you are asked to login
-* when you login or sign up you a taken to the next page where you are asked to choose what is most important to you 
+* when you open the page you are asked to login or signup
+* when you login or sign up you are taken to the next page where you are asked to choose what is most important to you 
 * After selection you are asked to select images that best suite your interest 
 * At the end of the page your are recommended where you should probably go next based on the images and options you selected 
 
