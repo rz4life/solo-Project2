@@ -13,8 +13,9 @@ const models = require('./models')
 const createUser = async (req, res)=>{
 
     try { 
-      const user = await models.user.create({
-        name: req.body.name,
+      const user = await models.client.create({
+        firstname:req.body.firstname,
+        lastname: req.body.lastname,
         email: req.body.email,
         password: req.body.password
       })
@@ -30,7 +31,7 @@ app.post('/users', createUser)
 
 const loginUser = async (req, res) =>{
     try {
-      const user = await models.user.findOne({
+      const user = await models.client.findOne({
         where:{
           email: req.body.email
         }
@@ -49,6 +50,39 @@ const loginUser = async (req, res) =>{
     }
 }   
 app.post('/users/login', loginUser)
+
+
+const saveResult = async (req, res) =>{
+    try {
+        
+        const user = await models.client.findOne({
+            where:{
+                id: req.params.id
+            }
+        })
+      console.log(user)
+        const result = await models.result.findOne({
+            where:{
+                resultName: req.params.resultName
+            }
+        })
+            console.log(result)
+        if(result){
+            await user.addResult(result)
+        }else{
+            const results = await models.result.create({
+                resultName: req.params.resultName
+            })
+            console.log(results)
+            await user.addResult(results)
+        }
+        res.json ({user, result})
+    } catch (error) {
+        res.json({error})
+    }
+}
+
+app.post('/users/:id/:resultName', saveResult)
 
 
 

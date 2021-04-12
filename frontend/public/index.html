@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"href="./style.css">
+    <title>Next Destination</title>
+</head>
+<body >
+    <div class="home-page">
+        <h1>Welcome</h1>
+        <p>Create an Account or Login to choose <br> <br> Your</p>
+        <h3>Next Destination</h3>
+        <div id = "buttons">
+        <span id="signup-link" class="nav-link">Sign Up</span>
+        <span id="login-link" class="nav-link">Login</span>
+      </div>
+    </div>
+
+    <div id ="signUpScreen"  class=" hidden">
+        <h3>Create a Free Account</h3>
+        <form class="signup-form">
+            <label for="signup-firstname">First Name</label>
+            <input type="text" id="signup-firstname">
+            <label for="signup-lastname">Last Name</label>
+            <input type="text" id="signup-lastname">
+            <label for="signup-email">Email</label>
+            <input type="text" id="signup-email">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password">
+      
+            <input  type="submit" value="Sign Up!">
+        </form>
+
+    </div>
+    <div id ="loginScreen" class=" hidden">
+        <h3>Login to Your Account</h3>
+        <form class="login-form">
+            <label for="login-email">Email</label>
+            <input type="text" id="login-email">
+            
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password">
+      
+            <input  type="submit" value="Log In!">
+        </form>
+    </div>
+
+
+    <div id="dashboardScreen" class = "hidden">
+
+        <h3>What is most important to you when it comes to traveling</h3>
+        <form class="option-form">
+            <input type="checkbox" id="option1" name="Music" value="Music">
+            <label for="Music"> I Love Music</label><br>
+            <input type="checkbox" id="option2" name="Food" value="Food">
+            <label for="Food"> Food is Life</label><br>
+            <input type="checkbox" id="option3" name="Activities" value="Activities">
+            <label for="Activities"> Fun Activities are a must</label><br>
+            <input type="checkbox" id="option4" name="Culture" value="Culture">
+            <label for="Culture"> How Much do the people value Culture</label><br>
+            <input id="button" type="submit" value="submit"><br> <br>
+        </form>
+        <div id = "user-info">
+            <div class = "user-name">Welcome</div>
+            <div class="user-image"></div>
+        </div>
+    </div>
+
+     <div id="dashboardScreen2"  class="hidden">
+
+
+         <h3 class="category"></h3>
+         <img class= "africa_img" src="https://images.pexels.com/photos/6210449/pexels-photo-6210449.jpeg?cs=srgb&dl=pexels-picha-6210449.jpg&fm=jpg" alt="">
+         <img class= "american_img" src="./images/american_food.jpg" alt="American Food">
+         <img class= "asian_img" src="https://images.pexels.com/photos/5929/food-salad-dinner-eating.jpg?cs=srgb&dl=pexels-kaboompics-com-5929.jpg&fm=jpg" alt="">
+         <img class= "european_img" src="https://images.pexels.com/photos/3762069/pexels-photo-3762069.jpeg?cs=srgb&dl=pexels-horizon-content-3762069.jpg&fm=jpg" alt="">
+        <p>Select (2) images that represent Your intrest the most</p>
+        <button class="next">Next Images</button>
+        <button class="skip">Next Category</button>
+     </div>
+     <div id="dashboardScreen3" class="hidden">
+
+        <h3>Based on What You Liked</h3>
+        <h3>You should probably go to</h3>
+        <h3 id="final-result"></h3>
+        <span id="logout-link" class="nav-link ">Logout</span>
+        <span id="saveresult-link" class="nav-link ">Save result</span>
+        <span id="viewresult-link" class="nav-link ">View Saved Results</span>
+
+     </div>
+
+
+<script async defer src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js "></script>
+<script async defer src="./main.js"></script>
+</body>
+</html>
